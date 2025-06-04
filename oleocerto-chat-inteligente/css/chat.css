@@ -2,27 +2,44 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
+    width: 60px;
+    height: 60px;
     background: #0A7E07;
     color: #fff;
     border: none;
-    padding: 10px 15px;
     border-radius: 50%;
     cursor: pointer;
     z-index: 9999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+#oleocerto-chat-toggle:hover {
+    transform: scale(1.1);
+}
+
+#oleocerto-chat-toggle .dashicons {
+    font-size: 28px;
+    line-height: 1;
 }
 
 #oleocerto-chat-box {
     position: fixed;
-    bottom: 80px;
+    bottom: 90px;
     right: 20px;
-    width: 300px;
-    max-height: 400px;
+    width: 320px;
+    max-height: 450px;
     background: #fff;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     z-index: 9999;
     display: flex;
     flex-direction: column;
+    font-family: Arial, sans-serif;
 }
 
 .chat-messages {
@@ -47,14 +64,24 @@
 
 #oleocerto-chat-box input {
     border: 1px solid #ccc;
-    padding: 5px;
-    width: calc(100% - 10px);
+    padding: 7px;
+    width: calc(100% - 14px);
     margin: 5px;
+    border-radius: 4px;
 }
 
 #oleocerto-chat-box button {
     margin: 5px;
-    padding: 5px;
+    padding: 7px;
+    background: #0A7E07;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#oleocerto-chat-box button:hover {
+    background: #096606;
 }
 
 .related {
@@ -66,4 +93,5 @@
     max-width: 100%;
     height: auto;
     display: block;
+    margin-bottom: 5px;
 }

@@ -68,6 +68,7 @@ class Oleocerto_Chat_Inteligente {
         if ( ! get_option( self::OPTION_ENABLED ) ) {
             return;
         }
+        wp_enqueue_style( 'dashicons' );
         wp_enqueue_style( 'oleocerto-chat-css', plugins_url( 'css/chat.css', __FILE__ ), array(), '1.0.0' );
         wp_enqueue_script( 'oleocerto-chat-js', plugins_url( 'js/chat.js', __FILE__ ), array('jquery'), '1.0.0', true );
         wp_localize_script( 'oleocerto-chat-js', 'oleocertoChat', array(

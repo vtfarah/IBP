@@ -1,7 +1,8 @@
 jQuery(document).ready(function($){
     var chatOpen = false;
     var container = $('<div>', {id: 'oleocerto-chat-box'}).hide();
-    var toggle = $('<button>', {id: 'oleocerto-chat-toggle', text: 'Chat'});
+    var toggle = $('<button>', {id: 'oleocerto-chat-toggle'});
+    toggle.append($('<span>', {class:'dashicons dashicons-search'}));
     var messages = $('<div>', {class: 'chat-messages'});
     var input = $('<input>', {type: 'text', placeholder: 'Digite sua pergunta...'});
     var sendBtn = $('<button>', {text: 'Enviar'});
